@@ -29,7 +29,7 @@ def movies_spider(start):
 
         info = item.find('div', {'class': 'info'})
         name = info.find('span', {'class': 'title'}).string
-        # save_pic(icon_path, name)
+        save_pic(icon_path, name)
         rating_num = info.find('span', {'class': 'rating_num'}).string
         total = info.find('span', {'class': 'rating_num'}).find_next_sibling().find_next_sibling().string
         inq = info.find('span', {'class': 'inq'})
